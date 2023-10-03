@@ -1,12 +1,35 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WinterGames Studio</title>
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
+    <!-- Styles & Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- End -->
+
+    <!-- Products -->
+    
+    <!-- End -->
+
+    <!-- Load the Buy Site -->
+    <button id="loadPageButton">Buy</button>
+
+    <script>
+        var loadPageButton = document.getElementById('loadPageButton');
+
+        loadPageButton.addEventListener('click', function() {
+
+            var pageUrl = 'buy.html';
+
+            window.location.href = pageUrl;
+        });
+    </script>
+    <!-- End -->
 </body>
 </html>

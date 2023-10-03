@@ -1,0 +1,15 @@
+#paypal-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    font-family: 'Fredoka One', sans-serif;
+    border: none;
+    size: 10;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

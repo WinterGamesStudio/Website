@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense</title>
+</head>
+<body>
+    <!-- Add a "Buy Now" button -->
+    <div id="paypal-button-container"></div>
+
+    <!-- Styles & Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Include the PayPal JavaScript SDK with the currency parameter set to EUR -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AahdKRiHQ0e63jLx46zPlQBJNmg4udpurHOoGAxYl_x59ZGQN-011FNj-2oXUKrCwlyj7qck3KQCY6BE&currency=EUR"></script>
+
+
+    <!-- Your JavaScript code goes here -->
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '4.99'
+                        }
+                    }]
+                });
+            },            
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>
